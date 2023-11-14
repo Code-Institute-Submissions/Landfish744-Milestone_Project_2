@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+/* Main view */
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    margin: 0;
+}
+
+/* Header and Footer */
+
+header {
+    text-align: center;
+    height: 40px;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    min-height: 70px;
+    padding-left: 5px;
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+}
+
+/* Game area */
+
+.game-area {
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    text-align: center;
+}
+
+.control {
+    display: inline-block;
+    margin: 2px;
+    width: 70px;
+    height: 30px
+}
+
+#messages {
+    height: 20px;
+}
+
+.player {
+    background-color: yellow;
+    float: left;
+    width: 35%;
+}
+
+#player-image {
+    width: 65%;
+}
+
+.computer {
+    background-color: aqua;
+    float: right;
+    width: 35%;
+}
+
+#computer-image {
+    width: 65%;
+}
