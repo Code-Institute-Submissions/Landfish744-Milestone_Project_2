@@ -11,6 +11,7 @@ const choices = ['rock', 'paper', 'scissors'];
 
 
 
+
 /**
  * Add event listener to buttons
  */
@@ -32,26 +33,29 @@ function playGame(playerChoice) {
 
     let computerChoice = Math.floor(Math.random() * 3);
 
-    playerImage.src = `assets/images/${choices[playerChoice]}.jpg`;
-    playerImage.alt = choices[playerChoice];
+    computerImage.src = `assets/images/${choices[computerChoice]}.jpg`;
+    computerImage.alt = choices[computerChoice];
 
-    let result = checkWinner(choices[computerChoice], choices[playerChoioce]);
+    let result = checkWinner(choices[computerChoice], choices[playerChoice]);
+    if (result === 'playerScore') {
+        playerScore.textContent = parseInt(playerScore.textContent) + 1;
+    } else if (result === 'computerScore') {
+        computerScore.textContent = parseInt(computerScore.textContent) + 1;
+    }
+
 }
 
 /**
  * Check to see who the winner is
  */
-function checkWinner() {
-    if (player == computer) {
+function checkWinner(computer, player) {
+    if (player === computer) {
         return 'Draw';
-    }
-    else if (computer == 'rock') {
-        return (plaayer == 'paper') ? playerScore++ : computerScore++
-    }
-    else if (computer == 'paper') {
-        return (plaayer == 'scissors') ? playerScore++ : computerScore++
-    }
-    else if (computer == 'scissors') {
-        return (plaayer == 'rock') ? playerScore++ : computerScore++
+    } else if (computer === 'rock') {
+        return (player === 'paper') ? 'playerScore' : 'computerScore';
+    } else if (computer === 'paper') {
+        return (player === 'scissors') ? 'playerScore' : 'computerScore';
+    } else if (computer === 'scissors') {
+        return (player === 'rock') ? 'playerScore' : 'computerScore';
     }
 }
