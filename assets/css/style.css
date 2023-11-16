@@ -23,6 +23,10 @@ header {
     height: 40px;
 }
 
+h2 {
+    color: #fff;
+}
+
 footer {
     position: absolute;
     width: 100%;
@@ -37,6 +41,10 @@ footer {
 }
 
 /* Game area */
+
+p {
+    color: #fff;
+}
 
 .game-area {
     width: 65%;
@@ -58,9 +66,9 @@ footer {
 }
 
 .player {
-    background-color: yellow;
+    background-color: #FED3C2;
     float: left;
-    width: 35%;
+    width: 45%;
 }
 
 #player-image {
@@ -68,9 +76,9 @@ footer {
 }
 
 .computer {
-    background-color: aqua;
+    background-color: #B161BD;
     float: right;
-    width: 35%;
+    width: 45%;
 }
 
 #computer-image {
