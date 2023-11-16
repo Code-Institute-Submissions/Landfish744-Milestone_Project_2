@@ -31,7 +31,7 @@ function playGame(playerChoice) {
     playerImage.src = `assets/images/${choices[playerChoice]}.jpg`;
     playerImage.alt = choices[playerChoice];
 
-    let computerChoice = Math.floor(Math.random() * 3);
+    let computerChoice = Math.floor(Math.random() * 5);
 
     computerImage.src = `assets/images/${choices[computerChoice]}.jpg`;
     computerImage.alt = choices[computerChoice];
@@ -51,25 +51,15 @@ function playGame(playerChoice) {
 function checkWinner(computer, player) {
     if (player === computer) {
         return 'Draw';
-    } else if (computer === 'rock') {
-        return (player === 'paper') ? 'playerScore' : 'computerScore';
-    } else if (computer === 'paper') {
-        return (player === 'scissors') ? 'playerScore' : 'computerScore';
-    } else if (computer === 'scissors') {
-        return (player === 'rock') ? 'playerScore' : 'computerScore';
-    } else if (computer === 'rock') {
-        return (player === 'spock') ? 'playerScore' : 'computerScore';
-    } else if (computer === 'paper') {
-        return (player === 'lizard') ? 'playerScore' : 'computerScore';
-    } else if (computer === 'scissors') {
-        return (player === 'spock') ? 'playerScore' : 'computerScore';
-    } else if (computer === 'spock') {
-        return (player === 'paper') ? 'playerScore' : 'computerScore';
-    } else if (computer === 'lizard') {
-        return (player === 'rock') ? 'playerScore' : 'computerScore';
-    } else if (computer === 'lizard') {
-        return (player === 'scissors') ? 'playerScore' : 'computerScore';
-    } else if (computer === 'spock') {
-        return (player === 'lizard') ? 'playerScore' : 'computerScore';
+    } else if (
+        (computer === 'rock' && (player === 'scissors' || player === 'lizard')) ||
+        (computer === 'paper' && (player === 'rock' || player === 'spock')) ||
+        (computer === 'scissors' && (player === 'paper' || player === 'lizard')) ||
+        (computer === 'lizard' && (player === 'spock' || player === 'paper')) ||
+        (computer === 'spock' && (player === 'rock' || player === 'scissors'))
+    ) {
+        return 'computerScore';
+    } else {
+        return 'playerScore';
     }
 }
