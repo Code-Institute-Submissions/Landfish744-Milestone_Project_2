@@ -7,7 +7,7 @@ const computerScore = document.getElementById('computer-score');
 const playerImage = document.getElementById('player-image');
 const computerImage = document.getElementById('computer-image');
 const messages = document.getElementById('messages');
-const choices = ['rock', 'paper', 'scissors'];
+const choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 
 
 
@@ -57,5 +57,19 @@ function checkWinner(computer, player) {
         return (player === 'scissors') ? 'playerScore' : 'computerScore';
     } else if (computer === 'scissors') {
         return (player === 'rock') ? 'playerScore' : 'computerScore';
+    } else if (computer === 'rock') {
+        return (player === 'spock') ? 'playerScore' : 'computerScore';
+    } else if (computer === 'paper') {
+        return (player === 'lizard') ? 'playerScore' : 'computerScore';
+    } else if (computer === 'scissors') {
+        return (player === 'spock') ? 'playerScore' : 'computerScore';
+    } else if (computer === 'spock') {
+        return (player === 'paper') ? 'playerScore' : 'computerScore';
+    } else if (computer === 'lizard') {
+        return (player === 'rock') ? 'playerScore' : 'computerScore';
+    } else if (computer === 'lizard') {
+        return (player === 'scissors') ? 'playerScore' : 'computerScore';
+    } else if (computer === 'spock') {
+        return (player === 'lizard') ? 'playerScore' : 'computerScore';
     }
 }
