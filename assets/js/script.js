@@ -2,11 +2,15 @@
  * Declear coonstants for the DOM
  */
 const buttons = document.getElementsByClassName('control');
-const playerScore = document.getElementById('player-score');
-const computerScore = document.getElementById('computer-score');
+const playerScoreElem = document.getElementById('player-score');
+const computerScoreElem = document.getElementById('computer-score');
 const playerImage = document.getElementById('player-image');
 const computerImage = document.getElementById('computer-image');
 const choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
+const scoreLimit = 3;
+
+let playerScore = 0;
+let computerScore = 0;
 
 
 
@@ -24,6 +28,8 @@ for (let button of buttons) {
 
 /**
  * The main game function
+ * shows choice picked 
+ * and adds score to winner
  */
 function playGame(playerChoice) {
 
@@ -37,15 +43,38 @@ function playGame(playerChoice) {
 
     let result = checkWinner(choices[computerChoice], choices[playerChoice]);
     if (result === 'playerScore') {
-        playerScore.textContent = parseInt(playerScore.textContent) + 1;
+        playerScore++;
+        playerScoreElem.textContent = playerScore;
     } else if (result === 'computerScore') {
-        computerScore.textContent = parseInt(computerScore.textContent) + 1;
+        computerScore++;
+        computerScoreElem.textContent = computerScore;
+    }
+
+    if (playerScore === scoreLimit || computerScore === scoreLimit) {
+        endGame();
     }
 
 }
 
 /**
- * Check to see who the winner is 
+ * Message after score limit reached
+ */
+function endGame() {
+    if (playerScore === scoreLimit) {
+        alert('Congrats you won! Live long and prosper')
+    } else {
+        alert('Unlucky you lost! Computers Make Excellent and Efficient Servants')
+    }
+
+    playerScore = 0;
+    computerScore = 0;
+    playerScoreElem.textContent = playerScore;
+    computerScoreElem.textContent = computerScore;
+}
+
+
+/**
+ * Check to see who the winner is
  */
 function checkWinner(computer, player) {
     if (player === computer) {
