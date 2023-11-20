@@ -45,7 +45,7 @@ function playGame(playerChoice) {
 }
 
 /**
- * Check to see who the winner is
+ * Check to see who the winner is 
  */
 function checkWinner(computer, player) {
     if (player === computer) {
