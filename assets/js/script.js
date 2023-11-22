@@ -22,7 +22,7 @@ for (let button of buttons) {
     button.addEventListener('click', function () {
         let playerChoice = this.getAttribute('data-choice');
         playGame(playerChoice);
-    })
+    });
 }
 
 
@@ -61,9 +61,9 @@ function playGame(playerChoice) {
  */
 function endGame() {
     if (playerScore === scoreLimit) {
-        alert('Congrats you won! Live long and prosper')
+        alert('Congrats you won! Live long and prosper');
     } else {
-        alert('Unlucky you lost! Computers Make Excellent and Efficient Servants')
+        alert('Unlucky you lost! Computers Make Excellent and Efficient Servants');
     }
 
     playerScore = 0;
