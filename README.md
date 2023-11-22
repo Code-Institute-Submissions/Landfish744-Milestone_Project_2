@@ -2,7 +2,7 @@
 
 This project was built to play the game Rock, Paper, Scissors, Lizard, Spock. It is a simply game with the winner the best out of five.
 
-!
+![Multi device wedsite mockup](assets/images-readme/multi-devices.png)
 
 ## Contents Table
 
@@ -48,7 +48,7 @@ the site used the four colors of :
 #512558 - purple , this was used for the computer.
 #180B24 - dark purple , this was anothor color used in the background image.
 
-!
+![|Color palette](assets/images-readme/color-pal.png)
 
 ### Fonts
 
@@ -75,15 +75,15 @@ All the images are to create a space theme.
 
 - The page has a great rating in lighthouse 
 
-!
+![Lighthouse score](assets/images-readme/lighthouse-ver.png)
 
 - The page has no errors in html validator.
 
-!
+![HTML validator](assets/images-readme/html-ver.png)
 
 - The css passes the validator.
 
-!
+![CSS validator](assets/images-readme/css-ver.png)
 
 - Only warnings show in jshint but code works perfectly.
 
