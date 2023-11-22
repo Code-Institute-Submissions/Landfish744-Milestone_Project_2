@@ -1,7 +1,7 @@
 # Rock Paper Scissors Lizard Spock
 
 
-![Multi device website mockup](https://github.com/Landfish744/Milestone_Project_2/blob/main/assets/images-readme/multi-devices.png)
+![Multi device website mockup](assets/images/images-readme/multi-devices.png)
 
 ## Contents Table
 
