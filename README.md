@@ -119,5 +119,6 @@ The site was deployed to github pages. The steps to deploy are :
 ## Credits
 
 - I took inspiration from the rock, paper, scissors game that was showed to use as an example to use. I made chages to the function and overall style so to make a rock, paper, scissors, lizard, spock game.
+- I took inspiration from w3schools for the modal.
 - The rules of the game I took from the game image I used.
 - I would also like to thank my mentor Spencer.
