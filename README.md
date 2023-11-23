@@ -69,7 +69,7 @@ All the images are to create a space theme.
 - Computer choices : The computer will choose at random.
 - Choices compared : When the player and computer has chosen , the results are compared to see who the winner is.
 - Best out of five : After the player has chosen in several plays , which is best of five , the game is decided with a message appearing if the player has won or lost.
-- End game : the game is restarted with both players on 0 again ready to play again.
+- End game : the game is restarted with both players on 0 again ready to play again. The message appears in a model that will either reload the page or bring you to google search.
 
 ## Testing
 
@@ -109,6 +109,9 @@ All the images are to create a space theme.
 
 The site was deployed to github pages. The steps to deploy are :
 
+- Use terminal to git add .
+- Git commit the message that I want to show.
+- And push the commit to GitHub pages.
 - In github repository , navigate to the settings tab.
 - From the source section drop-down menu , select main branch.
 - Once the main branch has been selected , the page will automatically refresh with detailed ribbon display to indicate successful deployment.
