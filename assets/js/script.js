@@ -6,6 +6,9 @@ const playerScoreElem = document.getElementById('player-score');
 const computerScoreElem = document.getElementById('computer-score');
 const playerImage = document.getElementById('player-image');
 const computerImage = document.getElementById('computer-image');
+const modal = document.getElementById("myModal");
+const span = document.getElementsByClassName("close")[0];
+const modalMessage = document.getElementById("modalMessage");
 const choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
 const scoreLimit = 3;
 
@@ -58,18 +61,39 @@ function playGame(playerChoice) {
 
 /**
  * Message after score limit reached
+ * Modal function
  */
 function endGame() {
     if (playerScore === scoreLimit) {
-        alert('Congrats you won! Live long and prosper');
+        modalMessage.innerText = "Congrats you won! Live long and prosper Would like like to try again?";
     } else {
-        alert('Unlucky you lost! Computers Make Excellent and Efficient Servants');
+        modalMessage.innerText = "Unlucky you lost! Computers Make Excellent and Efficient Servants";
     }
+
+    modal.style.display = "block";
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+    modal.style.display = "none";
+}
 
     playerScore = 0;
     computerScore = 0;
     playerScoreElem.textContent = playerScore;
     computerScoreElem.textContent = computerScore;
+}
+
+/**
+ * Reload page
+ */
+ function restartGame(){
+    window.location.reload();
+} 
+
+/**
+ * Load google.com
+ */
+function gotoGoogle(){
+    window.open('https://www.google.com/');
 }
 
 
